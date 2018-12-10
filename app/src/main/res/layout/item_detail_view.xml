@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemDetail">
+
+    <ImageView
+        android:id="@+id/iv_detail_view_image"
+        android:layout_width="@dimen/activity_horizontal_margin"
+        android:layout_height="@dimen/activity_vertical_margin"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/product_image_content_description" />
+
+    <TextView
+        android:id="@+id/tv_detail_view_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_detail_view_image"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:textSize="32sp"
+        android:textColor="@drawable/actionbar_color"
+        android:textStyle="bold"
+        tools:text="5.00" />
+
+    <TextView
+        android:id="@+id/tv_detail_view_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_detail_view_price"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textSize="32sp"
+        android:textColor="@drawable/gray_color"
+        tools:text="$10.00" />
+
+    <TextView
+        android:id="@+id/tv_detail_view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_detail_view_price"
+        android:layout_alignStart="@+id/tv_detail_view_price"
+        android:layout_alignLeft="@+id/tv_detail_view_price"
+        android:layout_marginTop="32dp"
+        android:textSize="32sp"
+        android:textColor="@drawable/gray_color"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/tv_detail_view_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_detail_view_title"
+        android:layout_alignStart="@+id/tv_detail_view_price"
+        android:layout_alignLeft="@+id/tv_detail_view_price"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:textSize="24sp"
+        android:textColor="@drawable/gray_color"
+        tools:text="Detailed description of item" />
+
+    <LinearLayout
+        android:id="@+id/btn_bar"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_detail_list"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@drawable/light_gray"
+            android:text="@string/wish_list_button" />
+
+        <Button
+            android:id="@+id/bt_detail_cart"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/actionbar_color"
+            android:textColor="@drawable/white_color"
+            android:text="@string/cart_button" />
+    </LinearLayout>
+</RelativeLayout>
